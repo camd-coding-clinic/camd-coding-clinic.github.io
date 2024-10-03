@@ -1,0 +1,312 @@
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: "logic-monospace", mono;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.syntax {
+
+    color: #474747;
+
+}
+
+header {
+
+    padding-top: 50px;
+    padding-left: 100px;
+    border-top: 20px solid #e9e9e9;
+
+}
+
+header h1 {
+    font-weight: 800;
+    font-style: normal;
+
+    color: #2b8e76;
+    font-size: 3rem;
+    position: relative;
+    margin: 5px 0px;
+    text-shadow: 5px 5px 8px rgba(43,142,118, 0.5);
+
+
+}
+
+header h1::before {
+
+    position: absolute;
+    left: -50px;
+    font-size: inherit;
+    color: #474747;
+    content: "<"
+}
+
+.propLabel {
+    color: #49a9dd;
+}
+
+.valueLabel {
+    color: #2180aa;
+    font-style: italic;
+
+}
+
+header h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    position: relative;
+    width: fit-content;
+    color: #474747;
+    margin: 5px 0px;
+}
+
+header h2:last-child::after {
+
+    position: absolute;
+    right: -50px;
+    font-size: inherit;
+    color: #474747;
+    content: ">"
+
+}
+
+header h3 {
+
+    color: #474747;
+    margin: 10px 0px;
+    margin-top: 30px;
+
+}
+
+
+main {
+    padding-top: 50px;
+    font-size: 1.2rem;
+    padding-left: 100px;
+
+
+}
+
+main h2 {
+
+    color: #2180aa;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 75px 0px 50px 0px;
+    position: relative;
+    width: fit-content;
+    text-shadow: 3px 3px 5px rgba(33,128,170, 0.5);
+
+}
+
+p {
+    width: 60%;
+    line-height: 2rem;
+}
+
+.scheduleAside {
+    font-style: italic;
+    font-weight: 400;
+}
+
+footer {
+
+    border-bottom: 20px solid #e9e9e9;    
+    text-align: right;
+    font-weight: 800;
+    font-style: normal;
+
+    color: #2b8e76;
+    font-size: 2rem;
+    margin: 5px 0px 0px 0px;
+    padding: 20px 20px 20px 0px;
+    text-shadow: 5px 5px 8px rgba(43,142,118, 0.5);
+
+    
+}
+
+#needHelp::before {
+    position: absolute;
+    left: -70px;
+    font-size: inherit;
+    color: inherit;
+    content: "<!--";
+    text-align: right;
+}
+
+#needHelp::after {
+    position: absolute;
+    right: -70px;
+    font-size: inherit;
+    color: inherit;
+    content: "-- >";
+    text-align: left;
+}
+
+#schedule::before {
+    position: absolute;
+    left: -40px;
+    font-size: inherit;
+    color: inherit;
+    content: "/*";
+    text-align: right;
+}
+
+#schedule::after {
+    position: absolute;
+    right: -40px;
+    font-size: inherit;
+    color: inherit;
+    content: "*/";
+    text-align: left;
+}
+
+#meetExperts::before {
+    position: absolute;
+    left: -80px;
+    font-size: inherit;
+    color: inherit;
+    content: "--- #";
+    text-align: right;
+}
+
+
+/* TABLE FOR SCHEDULE */
+
+table {
+
+    margin-left: 50px;
+
+}
+
+tr th, tr td{
+
+    padding: 10px 0px;
+    text-align: left;
+}
+
+tr td {
+    padding-left: 40px;
+}
+
+tr th {
+    font-style: italic;
+}
+
+/* EXPERTS LIST */
+
+#experts {
+    display: flex;
+    flex-direction: row;
+}
+
+#experts .column {
+    flex: 1 0 50%;
+    width: 50%;
+}
+
+#experts .column:last-child {
+    padding-left: 40px;
+}
+
+ul {
+
+    margin: 0px;
+    padding: 0px;
+    text-indent: 0px;
+}
+
+li {
+
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0px;
+
+}
+
+li .label {
+    flex: 0 1;
+    display: inline-block;
+}
+
+li .content {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+ul.sublist {
+    padding-left: 30px;
+}
+
+ul.sublist li {
+    position: relative;
+}
+
+ul.sublist li::before {
+
+    position: absolute;
+    left: -20px;
+    content: "–"
+}
+
+/* BACKGROUNDS */
+.bg {
+    position: absolute;
+    z-index: -1;
+    width: 30%;
+}
+
+.bg img {
+    width: 100%;
+
+}
+
+#bg_1 {
+    top: 100px;
+    right: 100px;
+}
+
+#bg_2 {
+    top: 25%;
+    left: 100px;
+}
+
+#bg_3 {
+    top: 50%;
+    right: 100px;
+}
+
+#bg_4 {
+    top: 75%;
+    left: 100px;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 768px) {
+
+    #experts {
+        flex-direction: column;
+    }
+
+    #experts .column {
+        flex: unset;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+
+}
