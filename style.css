@@ -50,7 +50,8 @@ header h1::before {
     left: -50px;
     font-size: inherit;
     color: #474747;
-    content: "<"
+    content: "<";
+    text-shadow: none;
 }
 
 .propLabel {
@@ -71,15 +72,19 @@ header h2 {
     width: fit-content;
     color: #474747;
     margin: 5px 0px;
+    margin-left: 50px;
 }
 
-header h2:last-child::after {
+header h2:last-of-type::after {
 
     position: absolute;
     right: -50px;
-    font-size: inherit;
+    margin-top: 0.3rem;
+    font-size: 3rem;
+    font-weight: 800;
     color: #474747;
-    content: ">"
+    content: ">";
+    line-height: 2rem;
 
 }
 
@@ -292,6 +297,11 @@ ul.sublist li::before {
 #bg_4 {
     top: 75%;
     left: 100px;
+}
+
+a:link, a:visited {
+
+    color: #2180aa;
 }
 
 /* MOBILE */
