@@ -122,6 +122,17 @@ p {
     line-height: 2rem;
 }
 
+main ul {
+    width: 60%;
+    list-style-type: square;
+    display: block;
+    padding-inline-start: 40px;
+}
+
+main ul li {
+    display: list-item;
+}
+
 .scheduleAside {
     font-style: italic;
     font-weight: 400;
