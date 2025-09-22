@@ -3,6 +3,8 @@
 <head>
     <title>Coding Clinic – Northeastern University, CAMD</title>
     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
     <link rel="stylesheet" href="https://use.typekit.net/tlg6ajq.css">
     <link rel="stylesheet" href="./style.css" />
 
@@ -14,13 +16,15 @@
     <div class="bg" id="bg_4"><img src="./assets/square-brackets.png" /></div>
     <header>
         <h1>Coding Clinic</h1>
-        <h2><span class="propLabel">when</span> = { <span class="valueLabel">Spring 2025</span> }</h2>
+        <h2><span class="propLabel">when</span> = { <span class="valueLabel">Fall 2025</span> }</h2>
         <h2><span class="propLabel">where</span> = { <span class="valueLabel">Ryder 236</span> }</h2>
         <h3>College of Arts, Media, and Design<br>Northeastern University</h3>
     </header>
     <main>
         <h2 id="needHelp">Do you need coding help?</h2>
-        <p>The Coding Clinic is here to support you! Drop by to get support and resources around everything related to coding and computation: troubleshooting problems, resolving errors, strategizing solutions, and more. Here are some reasons you might want to stop by:
+        <div id="two-column-container">
+            <div class="column-left">
+        <p>The Coding Clinic is here to support you! Meet with expert students to get support and resources around everything related to coding and computation: troubleshooting problems, resolving errors, strategizing solutions, and more. We can help you with questions such as:
         </p>
             <ul>
                 <li>Do you need help understanding the fundamentals of programming, or the mechanics of a specific programming language?</li>
@@ -30,37 +34,90 @@
                 <li>Did you build a project, but want feedback on its technical design or functionality? </li>
             </ul>
         <p>
-        Expert students are available to help with these kinds of questions and more. We’re happy to point you in the right direction on all things coding!
+        Expert students are available to help with these questions and more. We’re happy to point you in the right direction on all things coding!
         </p>
-        <p><b><a target="_blank" href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ae=true&login_hint">Book a consult today</a> or drop by Ryder 236 and say hello!</b></p>
+        <h2>3 ways to get help</h2>
+        <p>Expert students are available to support you Monday through Friday:</p>
+        <ul id="help-options">
+            <li><span class="pill-button">By Appointment</span> <b>In-person consultations:</b> <a target="_blank" href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ismsaljsauthenabled"><b>Book an appointment with Clinic staff</b></a> during regular Clinic hours (below) in Ryder 236 for consultation on coding problems</li>
+            <li><span class="pill-button">By Appointment</span> <b>Remote consultations:</b> Limited appointments are also available for consultations outside of regular Clinic hours, over Zoom, with Clinic staff depending on staff availability</li>
+            <li><span class="pill-button">Online</span> <b>NEW: Support on Discord:</b> Coding Clinic and Tools Clinic have teamed up to offer a Discord server, <a target="_blank" href="https://discord.gg/ba8c5grpm6"><b>Art + Design Clinics</b></a>, where you can ask questions about coding and computation, design tools and software, and everything in between. The server is managed by Clinics staff, who can help answer questions you might have. In addition, users who join may offer peer support, beyond Clinics staff, based on availability. <b><a target="_blank" href="https://discord.gg/ba8c5grpm6">Join the Art + Design Clinics server on Discord here!</a></b></li>
+        </ul>
         <h2 id="schedule">Schedule <span class="scheduleAside">Always in Ryder 236</span></h2>
+        <p>The Coding Clinic is open 4 days a week for in-person consultations in Ryder 236. Virtual consultations outside of regular clinic times are open by appointment and depend on availability of Clinic staff. In addition, 1 day each week is reservable by students or faculty for coding-related activities (learn more below).</p>
         <table>
-            <tr>
-                <th>Monday</th><td>1 – 3 PM</td>
+            <tr class="dropinhelp">
+                <th>Monday</th><td>2 – 4 PM</td><td>In-person support<a href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ismsaljsauthenabled" target="_blank"><span class="pill-book-now">Book <img src="./assets/open_new_window_blue.png" /></span></a></td>
             </tr>
-            <tr>
-                <th>Tuesday</th><td><i>Closed</i></td>
+            <tr class="coworkingspace">
+                <th>Tuesday</th><td>2 – 4 PM</td><td><i>By reservation<a href="https://outlook.office.com/book/ReserveCodingClinicSpace@northeastern.onmicrosoft.com/?ismsaljsauthenabled" target="_blank"><span class="pill-book-now">Request <img src="./assets/open_new_window_blue.png" /></span></a></i></td>
             </tr>
-            <tr>
-                <th>Wednesday</th><td>1 – 3 PM</td>
+            <tr class="dropinhelp">
+                <th>Wednesday</th><td>2 – 4 PM</td><td>In-person support<a href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ismsaljsauthenabled" target="_blank"><span class="pill-book-now">Book <img src="./assets/open_new_window_blue.png" /></span></a></td>
             </tr>
-            <tr>
-                <th>Thursday</th><td>1 – 3 PM</td>
+            <tr class="dropinhelp">
+                <th>Thursday</th><td>2 – 4 PM</td><td>In-person support<a href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ismsaljsauthenabled" target="_blank"><span class="pill-book-now">Book <img src="./assets/open_new_window_blue.png" /></span></a></td>
             </tr>
-            <tr>
-                <th>Friday</th><td>1 – 3 PM</td>
-            </tr>
-            <tr>
-                <th colspan="2"><i><a target="_blank" href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ae=true&login_hint">Book a consult here &rarr;</a></i></th>
+            <tr class="dropinhelp">
+                <th>Friday</th><td>2 – 4 PM</td><td>In-person support<a href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ismsaljsauthenabled" target="_blank"><span class="pill-book-now">Book <img src="./assets/open_new_window_blue.png" /></span></a></td>
             </tr>
         </table>
+        <p>Please note the following:</p>
+        <ul>
+            <li><b>In-person consultation:</b> Coding Clinic staff are available by appointment to meet with you and provide support during regular Clinic open hours. Outside of pre-booked appointments, additional support is available during regular Clinic hours on a drop-in basis, first come, first served; booked consultations take priority. Stop by Ryder 236 and talk to Clinic staff!</li>
+            <li><b>Virtual consultation:</b> Coding Clinic staff may be available for virtual consultations, during and outside regular Clinic hours, depending on availability; use the booking form to check availability.</li>
+            <li><b>Reserving Coding Clinic space:</b> Outside of regular open Clinic hours, the Coding Clinic space is open for reservation on Tuesdays for activities related to code and computation. Space is reservable on the following conditions:
+                        <ul>
+                <li>Coding Clinic space reservations are first come, first served and <b>must be requested at least 72 hours in advance</b></li>
+                <li>Reservation requests must be approved by the Clinic before space may be used</li>
+                <li>Space may <b>only be reserved by groups of at least 4 people and no more than 10 people</b></li>
+                <li>Space may <b>only be used for work on projects or activities related to coding or computation</b>, e.g., project work, small workshops and demos, peer troubleshooting and support, course-related functions, etc.</li>
+                <li>When reserving the space, you will be required to provide names and contact information of all group members, along with a description of how the space will be used</li>
+            </ul>
+            </li>
+
+        </ul>
+        <h2 id="schedule">Support for faculty</h2>
+        <p>If you are a faculty member teaching a course that involves a coding or computational component, you may utilize Coding Clinic for the following:</p>
+<ul>
+    <li><b>Collaborations to support pedagogy</b>: If you are teaching a course that involves a computational component and you have specific concerns or ideas related to teaching that you want to discuss, you may reach out to <a target="_blank" href="mailto:s.geofrey@northeastern.edu">Steven Geofrey</a> to arrange a consultation. Depending on use case, Coding Clinic may be able to arrange collaborations or interventions specifically tied to your course. Examples of past arrangements include:
+        <ul>
+            <li>Setting up a course assignment requiring a consultation with Coding Clinic staff, based around a course project or assignment, and verifying attendance</li>
+<li>Tracking and monitoring what questions students in your course bring to Coding Clinic consultations</li>
+<li>Developing a list of resources that may support student learning in your course</li>
+
+        </ul>
+    </li>
+    <li><b>Reserved space for faculty or courses</b>: Faculty may reserve the Coding Clinic space for specific course-related needs, as long as they have a clear computational or coding component (e.g., holding a project meeting with a student group; setting up a support session led by a TA). Please note:
+        <ul>
+<li>Coding Clinic space may only be reserved for faculty or course-specific needs in isolated sessions, or in short series of sessions; you cannot reserve the space for long or repeated durations (e.g., you cannot reserve every Monday for a course need)
+</li>            
+<li>
+    All reservation requests must go through and be approved by <a target="_blank" href="mailto:s.geofrey@northeastern.edu">Steven Geofrey</a>; significant reservation requests such as small workshops should be made at least 1 week in advance of the requested date
+
+</li>
+        </ul>
+    </li>
+    <li><b>Workshops, demonstrations, and exhibitions</b>: The space may be reserved for short-form workshops on special topics, demonstrations of specific projects, tools, or resources, and exhibitions of student work. Events may be initiated and organized by Coding Clinic staff, or faculty and student groups may also initiate events. Reach out to <a target="_blank" href="mailto:s.geofrey@northeastern.edu">Steven Geofrey</a> to discuss possibilities and make arrangements to reserve the space.</li>
+</ul>
+</p>
+            </div>
+            <div class="column-right">
+                <div id="sticky-button-container">
+        <p class="buttonlike"><a target="_blank" href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ismsaljsauthenabled">Book a consult with an expert</a></p>
+        <p class="buttonlike"><a target="_blank" href="https://discord.gg/ba8c5grpm6">Join Art + Design Clinics on Discord</a></p>
+<p class="buttonlike"><a target="_blank" href="https://outlook.office.com/book/ReserveCodingClinicSpace@northeastern.onmicrosoft.com/?ismsaljsauthenabled">Submit request to reserve Coding Clinic space for small groups (Tuesdays)</a></p>
+                </div>
+            </div>
+        </div>
+
         <h2 id="meetExperts">Meet the Experts</h2>
         <div id="experts">
             <div class="column">
                 <ul>
                     <li>
                         <span class="label">name:</span>
-                        <span class="content"><b>Austin Szema</b></span>
+                        <span class="content"><b>Jeffrey Chen</b></span>
                     </li>
                     <!-- <li>
                         <span class="label">bio:&nbsp;</span>
@@ -70,32 +127,31 @@
                         <ul class="sublist">
                             <li>languages:</li>
                                 <ul class="sublist">
-                                    <li>C#</li>
-                                    <li>Java</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
                                     <li>JavaScript</li>
+                                    <li>TypeScript</li>
+                                    <li>Java</li>
                                     <li>Python</li>
                                 </ul>
                             </li>
                             <li>frameworks:</li>
                                 <ul class="sublist">
-                                    <li>Unity</li>
-                                    <li>Unreal Engine 5</li>
-                                    <li>Processing</li>
-                                    <li>p5.js</li>
+                                    <li>Angular</li>
+                                    <li>React</li>
+                                    <li>Node</li>
                                 </ul>
                             </li>
                             <li>topics:</li>
                                 <ul class="sublist">
-                                    <li>Game development</li>
-                                    <li>Creative computing</li>
-                                    <li>Graphics</li>
+                                    <li>UI/UX design</li>
+                                    <li>Data visualization</li>
+                                    <li>3D printing</li>
                                 </ul>
                             </li>
                             <li>software:</li>
                                 <ul class="sublist">
-                                    <li>Blender</li>
-                                    <li>Adobe Photoshop</li>
-                                    <li>Adobe Premiere Pro</li>
+                                    <li>Figma</li>
                                 </ul>
                             </li>
                         </ul>
@@ -142,7 +198,7 @@
                             <li>software:</li>
                                 <ul class="sublist">
                                     <li>Adobe Suite</li>
-                                    <li>Processing</li>
+                                    <li>Processing IDE</li>
                                 </ul>
                             </li>
                         </ul>
@@ -154,7 +210,7 @@
                 <ul>
                     <li>
                         <span class="label">name:</span>
-                        <span class="content"><b></span>Max Spencer</b></span>
+                        <span class="content"><b></span>Harshil Parmar</b></span>
                     </li>
                     <!-- <li>
                         <span class="label">bio:&nbsp;</span>
@@ -164,36 +220,27 @@
                         <ul class="sublist">
                             <li>languages:</li>
                                 <ul class="sublist">
-                                    <li>HTML</li>
-                                    <li>CSS</li>
                                     <li>JavaScript</li>
-                                    <li>TypeScript</li>
                                     <li>Python</li>
                                 </ul>
                             </li>
                             <li>frameworks:</li>
                                 <ul class="sublist">
-                                    <li>Three.js</li>
-                                    <li>D3</li>
-                                    <li>React</li>
-                                    <li>Angular</li>
+                                    <li>Processing</li>
                                     <li>p5.js</li>
                                 </ul>
                             </li>
                             <li>topics:</li>
                                 <ul class="sublist">
-                                    <li>UX design</li>
-                                    <li>UI design</li>
-                                    <li>Front-end development</li>
-                                    <li>Data visualization</li>
-                                    <li>Graphic design</li>
+                                    <li>Creative coding</li>
+                                    <li>Software development</li>
+                                    <li>Software installation/setup</li>
+                                    <li>Debugging</li>
                                 </ul>
                             </li>
                             <li>software:</li>
                                 <ul class="sublist">
-                                    <li>Adobe Suite</li>
-                                    <li>Figma</li>
-                                    <li>Sketch</li>
+                                    <li>Git/GitHub</li>
                                 </ul>
                             </li>
                         </ul>
@@ -202,10 +249,11 @@
                 </ul>
             </div>
         </div>
-        <h2>Come talk to us!</h2>
-        <p><b><a target="_blank" href="https://outlook.office.com/book/CodingClinic@northeastern.onmicrosoft.com/?ae=true&login_hint">Tell us more about what help you're looking for and book a time</a> to meet with one of our experts.</b></p>
         <h2>Questions?</h2>
-        <p><b>Interested in partnering in some way with the Coding Clinic to support student learning in your course?</b> Reach out to discuss with Steven Geofrey, Coordinator of Creative Coding at <a href="mailto:s.geofrey@northeastern.edu">s.geofrey@northeastern.edu</a>.</p>
+        <aside id="questions">
+        <p><b>Do you have questions about what Coding Clinic is able to support? Are you interested in partnering in some way with the Coding Clinic to support student learning in your course?</b> Reach out to discuss with Steven Geofrey, coordinator for the Coding Clinic, at <a href="mailto:s.geofrey@northeastern.edu">s.geofrey@northeastern.edu</a>.</p>
+
+        </aside>
     </main>
 
     <footer><span class="syntax">&lt;/</span> Coding Clinic <span class="syntax">&gt;</span></footer>

@@ -1,7 +1,13 @@
 
+:root {
+    --primarygreen: #2b8e76;
+    --primaryblue: #2180aa;
+}
+
 body, html {
     margin: 0px;
     padding: 0px;
+    font-size: 16px;
 }
 
 * {
@@ -14,7 +20,6 @@ body {
     background-color: #f8f8f8;
     font-family: "logic-monospace", mono;
     position: relative;
-    overflow-x: hidden;
 }
 
 .syntax {
@@ -28,6 +33,7 @@ header {
     padding-top: 50px;
     padding-left: 100px;
     border-top: 20px solid #e9e9e9;
+    width: 100%;
 
 }
 
@@ -118,19 +124,67 @@ main h2 {
 }
 
 p {
-    width: 60%;
+    width: 100%;
     line-height: 2rem;
 }
 
+p.buttonlike {
+
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 10px;
+    background: rgba(33, 128, 170, 0.1);
+    border: 1px solid #ffffff;
+    box-shadow: 3px 3px 5px #ccc;
+    border-radius: 20px;
+    /* color: #000000; */
+    color: #2180aa;
+    padding: 0px;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 600;
+    line-height: 1.5rem;
+
+}
+
+p.buttonlike a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px;
+    color: #2180aa;
+    transition: color 0.2s;
+
+}
+
+
+
+p.buttonlike:hover {
+    background: rgba(33, 128, 170, 0.85);
+    color: #ffffff;
+}
+
+p.buttonlike:hover a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 main ul {
-    width: 60%;
+    width: 100%;
     list-style-type: square;
     display: block;
     padding-inline-start: 40px;
 }
 
+li > ul {
+
+    width: initial;
+}
+
 main ul li {
     display: list-item;
+    margin-top: 10px;
 }
 
 .scheduleAside {
@@ -199,27 +253,130 @@ footer {
     text-align: right;
 }
 
+#two-column-container {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.column-left {
+
+    flex: 0 1 60%;
+    width: 60%;
+    padding-right: 25px;
+}
+
+.column-right {
+
+    flex: 1;
+    position: relative;
+    padding-right: 25px;
+    display: flex;
+
+}
+
+#sticky-button-container {
+    width: 100%;
+    top: 40px;
+
+position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  align-self: flex-start; /* <-- this is the fix */
+
+}
+
+.pill-button {
+
+    display: block;
+    width: max-content;
+    border-radius: 10px;
+    padding: 3px 8px;
+    background: var(--primarygreen);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+}
+
+.pill-book-now {
+
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    border-radius: 10px;
+    padding: 0px 8px;
+    margin-left: 8px;
+    background: #ffffff;
+    color: var(--primaryblue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    font-style: initial;
+
+}
+
+.pill-book-now:hover {
+
+    border: 1px solid var(--primaryblue);
+}
+
+.pill-book-now img {
+
+    width: 20px;
+    margin-left: 4px;
+}
+
+ul#help-options {
+
+    list-style-type: none;
+
+    margin: 0px;
+    padding: 0px;
+
+    li {
+
+        margin-bottom: 20px;
+
+    }
+}
+
+
 
 /* TABLE FOR SCHEDULE */
 
 table {
 
-    margin-left: 50px;
+    margin: 0px;
 
 }
 
 tr th, tr td{
 
-    padding: 10px 0px;
+    padding: 10px 10px;
     text-align: left;
 }
 
 tr td {
-    padding-left: 40px;
+    /* padding-left: 40px; */
 }
 
 tr th {
     font-style: italic;
+}
+
+tr.dropinhelp {
+    background: rgba(250, 204, 152, 0.8);
+}
+
+tr.coworkingspace {
+    background: rgba(220,220,220,0.8);
+
+}
+
+aside#questions {
+    padding-right: 25px;
 }
 
 /* EXPERTS LIST */
@@ -231,8 +388,9 @@ tr th {
 }
 
 #experts .column {
-    flex: 1 0 50%;
-    width: 50%;
+    flex: 1 0 33%;
+    width: 33%;
+    min-width: 300px;
     margin-bottom: 40px;
 }
 
@@ -289,7 +447,6 @@ tr th {
 
 .bg img {
     width: 100%;
-
 }
 
 #bg_1 {
@@ -315,11 +472,68 @@ tr th {
 a:link, a:visited {
 
     color: #2180aa;
+    text-decoration: none;
+}
+
+a:hover {
+
+    text-decoration: underline;
+
 }
 
 /* MOBILE */
 
 @media only screen and (max-width: 768px) {
+
+    body, html {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    .bg {
+        width: 100%;
+    }
+
+    main {
+
+        padding-left: 25px;
+        padding-top: 0px;
+    }
+
+    main h2 {
+        margin-left: 0px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    main h2::before, main h2::after {
+        display: none !important;
+    }
+
+    header {
+        padding-left: 50px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header h1::before {
+
+        left: -25px;
+        font-size: 2.5rem;
+
+    }
+
+    header h2:last-of-type::after {
+        right: -25px;
+        font-size: 2.5rem;
+    }
+
+    header h2 {
+        margin-left: 0px;
+        font-size: 2rem;
+    }
 
     #experts {
         flex-direction: column;
@@ -328,7 +542,40 @@ a:link, a:visited {
     #experts .column {
         flex: unset;
         width: 100%;
-        margin-top: 50px;
+        margin-top: 0px;
+    }
+
+    #two-column-container {
+
+        flex-direction: column-reverse;
+    }
+
+    .column-left, .column-right {
+        flex: unset;
+        width: 100%;
+    }
+
+    #sticky-button-container {
+        position: relative;
+        top: unset;
+    }
+
+    p.buttonlike {
+        max-width: unset;
+    }
+
+    table th, table td {
+        display: inline-block;
+        width: 100%;
+
+    }
+
+    table th {
+        width: fit-content;
+    }
+
+    table tr td:first-of-type {
+        width: fit-content;
     }
 
 
